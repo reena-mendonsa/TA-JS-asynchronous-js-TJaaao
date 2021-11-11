@@ -7,6 +7,7 @@ console.log('First');
 setTimeout(() => console.log('Second'), 0);
 console.log('Third');
 ```
+![./img/pic1.jpg](./img/pic1.jpg)
 
 2.
 
@@ -18,7 +19,9 @@ function secondCall() {
 setTimeout(secondCall, 2000); // execute this code after 1000 ms
 setTimeout(() => console.log('Third'), 0); // execute this code after 1000 ms
 console.log('Third');
+
 ```
+![image](./img/pic2.jpg)
 
 3.
 
@@ -31,6 +34,7 @@ setTimeout(secondCall, 1000); // execute this code after 1000 ms
 setTimeout(() => console.log('Third'), 0);
 console.log('Fourth');
 ```
+![image](./img/pic3.jpg)
 
 4.
 
@@ -43,6 +47,7 @@ setTimeout(secondCall, 1000); // execute this code after 1000 ms
 setTimeout(() => console.log('Third'), 0);
 console.log('Fourth');
 ```
+![image](./img/pic3.jpg)
 
 5. What will be the output of the code below and why? Also write the timing of the output starting with 0 ms.
 
@@ -61,6 +66,7 @@ setTimeout(function exec() {
 runWhileLoopForNSeconds(3);
 console.log('Third');
 ```
+// First 0ms Third 3ms Second 3.1ms second
 
 6. Convert the synchronous code given below into asynchronous. If you execute this code it will print one, two and three. Change the code in such a way that it should print `one`, `three` and `two`. You are not allowed to move the code up and down.
 
@@ -68,7 +74,14 @@ console.log('Third');
 console.log('one');
 console.log('two');
 console.log('three');
+
+
+console.log('one');
+setTimeout(() => console.log('two'), 0);
+console.log('three');
+
 ```
+
 
 7. Convert the synchronous code given below into asynchronous. If you execute this code it will print one, two and three. Change the code in such a way that it should print `one`, `three` and `two`. You are not allowed to move the code up and down.
 
@@ -76,13 +89,19 @@ console.log('three');
 console.log('one');
 console.log('two');
 console.log('three');
+
+console.log('one');
+setTimeout(() => console.log('two'), 1000);
+console.log('three');
 ```
 
 8. Write a function named `asyncForEach` that is similar to `forEach`. But `asyncForEach` is asynchronous in nature rather than synchronous.
 
 ```js
-funciton asyncForEach(){
-  //
+funciton asyncForEach(array,cb){
+  setTimeout(() => {
+    array.forEach((elem) => cb(elem));
+  });
 }
 //  Output of the function below should be
 // one
@@ -92,6 +111,8 @@ funciton asyncForEach(){
 console.log('one');
 asyncForEach([1, 2, 3], (num) => console.log(num));
 console.log('three');
+
+
 ```
 
 9. Convert the following function into asynchronous. The output of the function will be
@@ -107,7 +128,14 @@ Convert the code below in such way that the output should be the one below
 <!-- 1, 2, 3, 4, 5 -->
 
 ```js
+// console.log('First Call');
+// [1, 2, 3, 4, 5].firEach((num) => console.log(num));
+// console.log('Last Call');
+
+
 console.log('First Call');
-[1, 2, 3, 4, 5].firEach((num) => console.log(num));
+setTimeout(() => {
+  [1, 2, 3, 4, 5].forEach((num) => console.log(num));
+});
 console.log('Last Call');
 ```
