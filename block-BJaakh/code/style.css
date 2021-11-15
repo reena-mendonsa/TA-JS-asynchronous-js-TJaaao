@@ -1,0 +1,112 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom styles */
+
+
+span,
+label {
+  padding-left: 1rem;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(253, 253, 168);
+}
+.display_none {
+  display: none;
+}
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+.todo_section {
+  max-width: 800px;
+  width: 100%;
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.5),
+    1px 1px 3px rgba(255, 255, 255, 0.9);
+
+  padding: 3rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(225, 225, 252);
+}
+.flex {  display: flex;
+  justify-content: center;
+}
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.display_block {
+  display: block !important;
+}
+.todos {
+  width: 100%;
+  padding: 1rem;
+}
+.combined_buttons {
+  text-align: center;
+  margin-top: 2rem;
+}
+.combined_buttons button {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+}
+.display {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  padding: 2rem;
+}
+.display li {
+  list-style-type: none;
+}
+span {
+  color: rgb(199, 69, 30);
+}
+.checkbox_style {
+  font-size: 2rem;
+}
